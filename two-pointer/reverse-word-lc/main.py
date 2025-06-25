@@ -1,5 +1,4 @@
-class Solution:
-    def reverseWords(self, str: str) -> str:
+def reverseWords(str):
         res = ''
         l, r = 0, 0 # l = ponteiro left, r = ponteiro right
 
@@ -13,3 +12,5 @@ class Solution:
         res += ' '
         res += str[l:r + 2][::-1]
         return res[1:]
+    
+print(reverseWords('Camila'))

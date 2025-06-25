@@ -8,7 +8,7 @@ def maximumLengthSubstring(string: str) -> int:
   # avança janela -> ponteiro r
   while r < len(string) - 1:
     r+=1
-    if counter.get(string[r]):
+    if counter.get(string[r]):  
       counter[string[r]]+= 1 
     else:
       counter[string[r]] = 1
