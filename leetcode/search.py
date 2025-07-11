@@ -13,4 +13,3 @@ def search(nums, target):
         else:
             r = m - 1
     return -1
-

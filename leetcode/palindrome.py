@@ -1,3 +1,5 @@
+# resolvido com two pointer
+
 def isPalindrome(s):
 
   newStr = ''.join(filter(str.isalnum, s)).lower()
@@ -13,3 +15,4 @@ def isPalindrome(s):
   return True
       
 print(isPalindrome("Ana"))
+
