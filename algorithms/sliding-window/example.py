@@ -17,6 +17,8 @@ def sliding_window_example(arr, k):
     for i in range(k):
         current_sum += arr[i]
     
+    # Ouu max_sum = sum(arr[:k])
+    
     max_sum = current_sum
     
     # Deslizar a janela pelo array
