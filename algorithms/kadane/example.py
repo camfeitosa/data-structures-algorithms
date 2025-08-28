@@ -21,12 +21,18 @@ print(f"A maior soma do subarray é: {max_subarray_sum(nums_exemplo)}")
 
 
 # Algoritmo de Kadane
+# Utiliza para encontrar o subarray de soma máxima, mesmo com números negativos
 def max_subarray_kadane(nums):
-    max_atual = max_global = nums[0]
+    max_atual = nums[0]
+    max_global = nums[0]
 
     for num in nums[1:]:
-        max_atual = max(num, max_atual + num)
-        if max_atual > max_global:
+        max_atual = max(num, max_atual + num) # numéro atual pode ser -4
+        # e o número máximo anterior pode ser -2
+        # entre -4 e (-2 - 4) = -6 ele analísa qual é o valor maior
+        # seria o -4
+        if max_atual > max_global: # se o máx_atual for maior que o máx_global
+            # redefino o max_global
             max_global = max_atual
 
     return max_global
